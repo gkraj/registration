@@ -1,0 +1,15 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div>
+            <a href="" class="navbar-brand">RGHSS - Patient</a>
+        </div>
+        <ul class="navbar-nav">
+                    <!-- <li><a *ngIf = "isUserAuth" routerLink="/" class="nav-link">Registration Form</a></li> -->
+                    <li><a *ngIf="isUserAuth" routerLink="/patients" class="nav-link">View Patients</a></li>
+        </ul>
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+                    <li><a *ngIf="!isUserAuth" routerLink="/login" class="nav-link">Login</a></li>
+                    <li><a *ngIf="isUserAuth" routerLink="/logout" class="nav-link">Logout</a></li>
+        </ul>
+    </nav>
+</header>

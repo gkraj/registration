@@ -1,0 +1,22 @@
+<div class="alert alert-warning" *ngIf = "WelcomeError">
+    <br>
+    {{WelcomeError}}
+    
+</div>
+
+<div class="container">
+    <h1>Welcome {{name}}</h1>
+    In order to create todo list go <a routerLink = "/todos"> here</a>
+</div>
+
+<div class="container">
+    This button will invoke new message
+    <button (click)="getButtonValue()" class="btn btn-success">Click Me</button>
+</div>
+
+<div class="container" *ngIf = "WelcomeMessage">
+    Customized welcome message
+    <br>
+    {{WelcomeMessage}}
+    
+</div>

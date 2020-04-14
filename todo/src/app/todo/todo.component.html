@@ -1,0 +1,111 @@
+<div><hr></div>
+<div class="container">
+    <h1>Patient</h1>
+    <!-- <div class="alert alert-warning" *ngIf="todoForm.dirty && todoForm.invalid">Enter Valid Value</div>
+    <div class="alert alert-warning" *ngIf="todoForm.dirty && tododescription.invalid">Enter Valid description</div> -->
+    <!-- <div class="alert alert-warning" *ngIf="todoForm.dirty && todoDate.invalid">Enter Valid target date</div> -->
+    <!-- <form (ngSubmit)="!todoForm.invalid && saveTodo()" #todoForm="ngForm"> -->
+    <form (ngSubmit)="saveTodo()">
+        <div class="form-row">
+            <fieldset class="form-group col-md-3">
+                <label>Patient ID</label>
+                <input type="String" #tododescription = "ngModel" [(ngModel)]="todo.uhid" 
+                class="form-control" name="uhid" required="required" minlength="3">
+            </fieldset>
+            <fieldset class="form-group col-md-7">
+                <label>Name</label>
+                <input type="text" #tododescription = "ngModel" [(ngModel)]="todo.name" 
+                class="form-control" name="name" required="required" minlength="3">
+            </fieldset>
+        </div>
+        <div class="form-row">
+            <fieldset class="form-group col-md-4">
+                <label>Date & Time of Admission</label>
+                <input type="datetime-local" #tododescription = "ngModel" [ngModel]="todo.timeofadmission | date:'yyyy-MM-ddTHH:mm'" (ngModelChange)="todo.timeofadmission = $event" 
+                class="form-control" name="timeofadmission" required="required" minlength="1">
+            </fieldset>
+            <fieldset class="form-group col-md-3">
+                <label>Age</label>
+                <input type="number" #tododescription = "ngModel" [(ngModel)]="todo.age" 
+                class="form-control" name="age" required="required" minlength="1">
+            </fieldset>
+            <fieldset class="form-group col-md-3">
+                <label>Gender</label>
+                <input type="text" #tododescription = "ngModel" [(ngModel)]="todo.gender" 
+                class="form-control" name="gender" required="required">
+            </fieldset>
+        </div>
+        <div class="form-row">
+            <fieldset class="form-group col-md-4">
+                <label>Phone No</label>
+                <input type="number" #tododescription = "ngModel" [(ngModel)]="todo.phonenumber" 
+                class="form-control" name="phonenumber" required="required" minlength="1">
+            </fieldset>
+            <fieldset class="form-group col-md-3">
+                <label>Place</label>
+                <input type="text" #tododescription = "ngModel" [(ngModel)]="todo.place" 
+                class="form-control" name="place" required="required" minlength="1">
+            </fieldset>
+            <fieldset class="form-group col-md-3">
+                <label>State</label>
+                <input type="text" #tododescription = "ngModel" [(ngModel)]="todo.state" 
+                class="form-control" name="state" required="required">
+            </fieldset>
+        </div>
+        <div class="form-row">
+            <fieldset class="form-group col-md-4">
+                <label>Symptoms</label>
+                <input type="text" #tododescription = "ngModel" [(ngModel)]="todo.symptoms" 
+                class="form-control" name="symptoms" required="required" minlength="1">
+            </fieldset>
+            <fieldset class="form-group col-md-3">
+                <label>Contact Exposure</label>
+                <input type="text" #tododescription = "ngModel" [(ngModel)]="todo.contactexposure" 
+                class="form-control" name="contactexposure" required="required" minlength="1">
+            </fieldset>
+            <fieldset class="form-group col-md-3">
+                <label>co-morbities</label>
+                <input type="text" #tododescription = "ngModel" [(ngModel)]="todo.comorbities" 
+                class="form-control" name="comorbities" required="required">
+            </fieldset>
+        </div>
+        <div class="form-row">
+            <fieldset class="form-group col-md-4">
+                <label>Sample Reporting Date</label>
+                <input type="datetime-local" #tododescription = "ngModel" [ngModel]="todo.sampereportingdate | date:'yyyy-MM-ddTHH:mm'" (ngModelChange)="todo.sampereportingdate = $event"
+                class="form-control" name="sampereportingdate" required="required" minlength="1">
+            </fieldset>
+            <fieldset class="form-group col-md-3">
+                <label>Sample Status</label>
+                <input type="text" #tododescription = "ngModel" [(ngModel)]="todo.samplestatus" 
+                class="form-control" name="samplestatus" required="required" minlength="1">
+            </fieldset>
+            <fieldset class="form-group col-md-3">
+                <label>Discharge Date</label>
+                <input type="datetime-local" #tododescription = "ngModel" [ngModel]="todo.dischargedate | date:'yyyy-MM-ddTHH:mm'" (ngModelChange)="todo.dischargedate = $event" 
+                class="form-control" name="dischargedate">
+            </fieldset>
+        </div>
+        <div class="form-row">
+            <fieldset class="form-group col-md-4">
+                <label>Additional Info</label>
+                <input type="text" #tododescription = "ngModel" [(ngModel)]="todo.additionalinfo" 
+                class="form-control" name="additionalinfo">
+            </fieldset>
+            <fieldset class="form-group col-md-3">
+                <label>Doctor Name</label>
+                <input type="text" #tododescription = "ngModel" [(ngModel)]="todo.doctorname" 
+                class="form-control" name="doctorname" required="required" minlength="1">
+            </fieldset>
+            <fieldset class="form-group col-md-3">
+                <label>Doctor Number</label>
+                <input type="number" #tododescription = "ngModel" [(ngModel)]="todo.doctornumber" 
+                class="form-control" name="doctornumber" required="required">
+            </fieldset>
+        </div>
+
+        <button type="submit" class="btn btn-success" >Save</button>
+        <br>
+        <hr>
+    </form>
+</div>
